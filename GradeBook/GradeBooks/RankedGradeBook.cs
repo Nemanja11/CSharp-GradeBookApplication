@@ -13,22 +13,22 @@ namespace GradeBook.GradeBooks
         public override char GetLetterGrade(double averageGrade)
         {
             if(Students.Count<5)
-            throw new InvalidOperationException("Ranked gradingrequires at least 5 students.");
+            throw new InvalidOperationException("ranked gradingrequires at least 5 students.");
 
             var treshold=(int)Math.Ceiling(Students.Count *0.2);
-            var grades=Students.OrderByDescending(e=>e.averageGrade).Select(e=>e.averageGrade).ToList();
+            var grades=Students.OrderByDescending(e=>e.AverageGrade).Select(e=>e.AverageGrade).ToList();
             if (grades[treshold-1]<=averageGrade)
-            {return 'A';}
-
+            return 'A';
             else if (grades[(treshold*2)-1]<=averageGrade)
-            {return 'B';}
+            return 'B';
             else if (grades[(treshold*3)-1]<=averageGrade)
-            {return 'C';}
+            return 'C';
             else if (grades[(treshold*4)-1]<=averageGrade)
-            {return 'D';}
+            return 'D';
             else 
-           { return 'F';}
-       
+            return 'F';
+
+        
         }
     }
 }
