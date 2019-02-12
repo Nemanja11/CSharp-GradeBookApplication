@@ -17,11 +17,11 @@ namespace GradeBook.GradeBooks
             var grades=Students.OrderByDescending(e=>e.averageGrade).Select(e=>e.averageGrade).ToList();
             if (grades[treshold-1]<=averageGrade)
             return 'A';
-            else if grades[(treshold*2)-1]<=averageGrade)
+            else if (grades[(treshold*2)-1]<=averageGrade)
             return 'B';
-            else if grades[(treshold*3)-1]<=averageGrade)
+            else if (grades[(treshold*3)-1]<=averageGrade)
             return 'C';
-            else if grades[(treshold*4)-1]<=averageGrade)
+            else if (grades[(treshold*4)-1]<=averageGrade)
             return 'D';
             else 
             return 'F';
