@@ -9,6 +9,8 @@ namespace GradeBook
 {
     public class Student
     {
+        internal object averageGrade;
+
         public string Name { get; set; }
         public StudentType Type { get; set; }
         public EnrollmentType Enrollment { get; set; }
