@@ -48,7 +48,7 @@ namespace GradeBook.GradeBooks
                 Console.WriteLine("Ranked grading requires at least 5 students.");
                 return;
             }
-            base.CalculateStudentStatistics(Name);
+            base.CalculateStudentStatistics(name);
         }
     }
 }
