@@ -29,5 +29,23 @@ namespace GradeBook.GradeBooks
             return 'F';
         return base.GetLetterGrade(averageGrade);
         }
+
+        public override void CalculateStatistics()
+        {
+            if(Students.Count<5)
+                System.Console.WriteLine("Ranked grading requires at least 5 students.");
+            return;
+            base.CalculateStatistics();
+        }
+
+        public override void CalculateStudentStatistic()
+        {
+            if (Students.Count < 5)
+            {
+                System.Console.WriteLine("Ranked grading requires at least 5 students.");
+                return;
+            }
+            base.CalculateStudentStatistic(name);
+        }
     }
 }
